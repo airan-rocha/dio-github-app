@@ -14,7 +14,7 @@ function App() {
         <Contexto.Provider value={[context, setContext]}>
           <Search />
           {!context && <p>As informações irão aparecer aqui...</p>}
-          {context && <GitHub userName={context}/>}
+          {context && <GitHub userName={context} />}
         </Contexto.Provider>
       </div>
     </div>

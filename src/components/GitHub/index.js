@@ -3,7 +3,11 @@ import api from '../../services/api';
 import Header from '../Header';
 import Repositories from '../Repositories';
 
+// export const PagesRepo = createContext();
+
 const GitHub =({userName = 'airan-rocha', children}) => {
+    const [pagesRepo, setPagesRepo] = useState(1);
+
     const [gitHubState, setGitHubState] = useState({
         id: undefined,
         name: undefined,
@@ -27,6 +31,7 @@ const GitHub =({userName = 'airan-rocha', children}) => {
     });
   
     useEffect(() => {
+        setPagesRepo(1);
         api
           .get(`users/${userName}`)
           .then((response) => setGitHubState(
@@ -52,7 +57,7 @@ const GitHub =({userName = 'airan-rocha', children}) => {
     
     useEffect(() => {
         api
-          .get(`users/${userName}/repos`)
+          .get(`users/${userName}/repos?page=${pagesRepo}`)
           .then((response) => setGitHubState(
               prevState => { 
                 console.log(`\n...\nget api repos: ${JSON.stringify(response)}`);
@@ -61,14 +66,14 @@ const GitHub =({userName = 'airan-rocha', children}) => {
                     repos: response.data,
               }}))
           .catch(err => {console.error("erro api: " + err)});
-    }, [userName]);
+    }, [userName, pagesRepo]);
     
     return (
-        <view value = {gitHubState} >
+        <div>
             <Header value={gitHubState} />
-            <Repositories value={gitHubState}/>
+            <Repositories value={gitHubState} pagesRepo={pagesRepo} setPagesRepo={setPagesRepo}  />
             {children}
-        </view>
+        </div>
     );
 }
 

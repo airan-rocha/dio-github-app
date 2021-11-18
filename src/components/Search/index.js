@@ -16,7 +16,6 @@ const Search = () => {
     const eventClick = () => {
         console.log(`eventClick - ${searchValue}`);
         setContext(searchValue);
-
     }
 
     return (

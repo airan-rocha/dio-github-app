@@ -3,7 +3,7 @@
 
 Nesse repositório, estou colocando os arquivos do desafio: Criando um front-end totalmente componentizado na prática com ReactJS.
 
-Essa é uma palicação Web que retorna informações do usuário do github pesquisado via api do GitHub
+Essa é uma aplicação Web que retorna informações do usuário do github pesquisado via api do GitHub
 
 ### _Como me encontrar:_
 > * [Linkedin](https://www.linkedin.com/in/airan-rocha/);

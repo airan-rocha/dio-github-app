@@ -1,0 +1,11 @@
+.container-github-info{
+    font-size: 0.9em;
+}
+.container-github-info div {
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+}
+.container-github-info div p:first-child{
+    font-weight: bold;
+}

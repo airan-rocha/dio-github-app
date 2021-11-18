@@ -1,0 +1,18 @@
+.div-search{
+    --button-width: 110px;
+    margin-top: 1px;
+    margin-bottom: 15px;
+}
+.div-search input{
+    width: calc(100% - var(--button-width) - 12px);
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+}
+.div-search input[type = 'button']{
+    width: var(--button-width);
+    margin-left: 10px;
+    background-color: #2023e4;
+    color: #ffffff;
+    text-transform: uppercase;
+}

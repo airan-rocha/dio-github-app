@@ -1,0 +1,28 @@
+.repositorie-view {
+    display: inline-block;
+    background-color: #e0e0e0;
+    padding: 10px 20px 10px 20px;
+    width: 300px;
+    height: 180px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px #a0a0a0;
+    margin: 10px;
+    vertical-align: bottom;
+}
+
+.repositorie-view p {
+    margin-bottom: 0.5em;
+}
+
+.repositorie-view p:first-child {
+    font-size: 1.4em;
+}
+
+.repositorie-view a {
+    text-decoration: none;
+    color: #1c1cff;
+}
+
+.repositorie-view a:hover {
+    color: #5353ff;
+}

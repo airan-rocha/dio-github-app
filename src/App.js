@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect, useContext, createContext, useState } from 'react';
+import './styles/Style.css';
+import GitHub from './components/GitHub';
+import Search from './components/Search';
+import { Contexto } from './Context';
 
 function App() {
+  const [context, setContext] = useState('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="top-box" />
+      <div className="App">
+        <Contexto.Provider value={[context, setContext]}>
+          <Search />
+          {!context && <p>As informações irão aparecer aqui...</p>}
+          {context && <GitHub userName={context}/>}
+        </Contexto.Provider>
+      </div>
     </div>
   );
 }

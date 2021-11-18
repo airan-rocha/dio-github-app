@@ -14,8 +14,14 @@
     margin-bottom: 0.5em;
 }
 
+.repositorie-view p:last-child {
+    margin-top: 1.5em;
+    text-align: center;
+}
+
 .repositorie-view p:first-child {
     font-size: 1.4em;
+    margin-bottom: 1em;
 }
 
 .repositorie-view a {

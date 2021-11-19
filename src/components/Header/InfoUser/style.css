@@ -4,15 +4,16 @@
     /* margin-left: 20px; */
     margin-bottom: 1em;
 }
+.info-user a{
+    color: #0000ff;
+    text-decoration: none;
+}
+.info-user a:hover {
+    color: #3333f7;
+}
 .name{
     font-size: 3em;
 }
 .login {
     font-size: 1.2em;
-}
-.login a{
-    color: #0000ff;
-}
-.login a:hover {
-    color: #3333f7;
 }

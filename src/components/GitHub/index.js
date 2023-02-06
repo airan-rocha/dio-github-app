@@ -5,7 +5,7 @@ import Repositories from '../Repositories';
 
 // export const PagesRepo = createContext();
 
-const GitHub =({userName = 'airan-rocha', children}) => {
+const GitHub =({userName, children}) => {
     const [pagesRepo, setPagesRepo] = useState(1);
 
     const [gitHubState, setGitHubState] = useState({
